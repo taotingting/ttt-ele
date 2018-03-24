@@ -1,6 +1,6 @@
 <template>
   <div>
-    <header></header>
+    <header :seller="seller"></header>
     <div class="tab">
         <div class="tab-item">
           <router-link to="/goods">商品</router-link >
@@ -17,16 +17,25 @@
 </template>
 <script>
 import header from './components/header/header.vue';
-
+const ERR_OK = 0;
 export default{
   components: {
     'v-header': header
+  },
+  data(){
+    return {
+      seller:{}
+    }
+  },
+  created(){
+    this.$http.get('/api/seller').then((response)=>{
+      response=response.body
+      if(response.errno===ERR_OK){
+        this.seller=response.data
+         console.log(this.seller)
+      }
+    })
   }
-  // data(){
-  //   return {
-
-  //   }
-  // }
 }
 </script>
 

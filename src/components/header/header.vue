@@ -1,10 +1,20 @@
 <template>
-  <div>我是商家</div>
+  <div class="header">
+    <div class="content-wrapper">
+      <div class="avatar">
+        <img :src="seller.avatar">
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
 export default{
-    
+    props:{
+      seller:{
+        type:Object
+      }
+    }
 }
 </script>
 
