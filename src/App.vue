@@ -1,6 +1,6 @@
 <template>
   <div>
-    <header :seller="seller"></header>
+    <v-header :seller="seller"></v-header>
     <div class="tab">
         <div class="tab-item">
           <router-link to="/goods">商品</router-link >
@@ -32,7 +32,6 @@ export default{
       response=response.body
       if(response.errno===ERR_OK){
         this.seller=response.data
-         console.log(this.seller)
       }
     })
   }
