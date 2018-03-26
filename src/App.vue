@@ -44,6 +44,7 @@ export default{
     width:100%;
     height: 40px;
     line-height: 40px;
+    box-shadow: 0 1px 0 0 rgba(7,17,27,0.1);
     .tab-item{
       flex:1;
       text-align: center;
