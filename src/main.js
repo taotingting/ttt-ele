@@ -5,8 +5,12 @@ import App from './App'
 import router from './router'
 import VueResource from 'vue-resource'
 
+import './common/style/index.less'
+import star from './components/star/star.vue'
+
 Vue.config.productionTip = false
 Vue.use(VueResource)
+Vue.component('star',star)
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
