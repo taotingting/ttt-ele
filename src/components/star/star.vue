@@ -25,6 +25,7 @@ export default{
    },
    computed:{
      starType(){
+       console.log(1)
        return "starType"+this.size
        //注释部分是我自己的写法 看了别人的想法感觉自己就是智障
       //  switch(this.size){
